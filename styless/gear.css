@@ -9,10 +9,19 @@
   align-items: center;
   margin-right: 120px;
 }
+.nav-links:hover{
+ cursor: pointer;
+ transform: scale(1.05);
+}
 .nav-items {
   list-style: none;
   margin-right: 30px;
 
+}
+.nav-items:hover{
+ cursor: pointer;
+  transform: scale(1.05);
+  background-color: #8c1c45;
 }
 .brand-name{
     margin-left: 120px;
@@ -36,6 +45,9 @@
 .text-colour1{
     color: #3A3A3A;
 }
+.text-color2{
+  color: white;
+}
 .btn-primary{
     background-color: #E02C6D ;
     color: white;
@@ -44,16 +56,24 @@
     border: 0;
     border-radius: 12px;
 }
+.btn-primary:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  color: #8c1c45;
+}
 
 /* Banner Content */
 .banner{
   display: flex;
-  gap: 130px;
+  gap: 250px;
   align-items: center;
+  justify-content: space-evenly
+
+  
 }
 .banner-content{
     max-width: 582px;
-    margin: auto 130px auto;
+   
      text-align: left;
      gap: -5px
      ;
@@ -69,7 +89,7 @@
   position: relative;
   width: 475px;  /* match your circle image width */
   height: 475px; /* match your circle image height */
-  margin: 0 auto;
+  margin-right: 130px;
 }
 
 .circle-image {
@@ -86,15 +106,271 @@
 }
 
 .links{
-    justify-content: space-between;
-  align-items: center;
+   
+ 
     border: 1px solid gainsboro;
   max-width: 1110px;
+  
+  margin: 165px auto 165px auto;
 }
 .links-container img{ 
-   
-  margin: 165px auto;
-  max-width: 1110px;
+
+  padding:  20px ;
+  
+}
+
+
+.links-container {
+  display: flex;          /* enables flex layout */
+  
 
   justify-content: space-between;
+  align-items: center;
+    
+   flex-wrap: wrap;
+
 }
+
+/*collection section*/
+/* Collection Section Grid */
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Single Card Container */
+.collections {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.collection-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px; /* reduced gap */
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 10px;
+  justify-items: center; /* center items in grid cells */
+}
+
+.collection-container {
+
+  border: 2px solid white;
+  max-width: 320px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  height: auto;          /* dynamic height */
+  overflow: hidden;      /* hide overflow */
+}
+.collection-container:hover{
+  cursor: pointer;
+  transform: scale(1.15);
+  box-shadow: #555;
+}
+.collection-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  object-fit: cover;
+}
+
+.collection-photo-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 10px 0 6px;
+}
+
+.collection-price {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 10px;
+  color: #555;
+}
+
+.rating {
+  max-width: 122px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.collection-desc {
+  max-width: 196px;
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0 auto;
+
+  max-height: 60px;      /* optional to limit text height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*Featured Section*/
+.featured{
+  margin-bottom: 100px;
+}
+.feature-title{
+  font-size: 2.125rem;
+  font-weight: 700px;
+}
+.featured-contents{
+  display: flex;
+  gap: 96px;
+  max-width: 1110px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 165px;
+  margin-right: 165px;
+
+}
+.featured-photo{
+  max-width: 400px;
+  height: 270px;
+  border-radius: 7px;
+  
+  
+}
+/*footer section*/
+.footer {
+  background-color: #13113b;
+  text-align: center;
+  padding: 50px 580px; /* top-bottom: 50px, left-right: 580px */
+  color: white;
+}
+
+.footer-writings {
+  max-width: 262px;
+  margin: 0 auto 30px; /* center content and separate from logos */
+}
+
+.footer-logos ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* adds 16px gap between each icon */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-logos img {
+  max-width: 32px;
+  height: 32px;
+}
+
+
+/*Media and Querry*/
+@media screen and (max-width: 576px) {
+
+  /* Navbar adjustments */
+ 
+  .brand-name {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 50px; /* optional */
+  width: max-content; /* shrink-wrap the width */
+}
+  }
+ .nav-links {
+    display: none;
+  }
+
+  .nav-items {
+    display: none;
+  }
+  /* Banner adjustments */
+ .banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px; /* Reduce gap on small screens */
+    padding: 20px;
+  }
+
+  .banner-content {
+    margin: 0 20px;
+  }
+
+  .banner-wrap {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .circle-image {
+    width: 100%;
+  }
+
+  .main-camera {
+    width: 270px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(15px, 15px); /* Adjust for center */
+}
+
+  /* Links section */
+  .links {
+    border: none;
+    margin: 42px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .links-container {
+    
+    flex-direction: row;
+    
+   flex-wrap: wrap;
+    
+
+  }
+
+  /* Collections */
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Featured section */
+  .featured-contents {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 30px;
+  }
+  .featured-photo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .footer-writings {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+  .footer-logos ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+

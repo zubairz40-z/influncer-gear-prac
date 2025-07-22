@@ -11,7 +11,6 @@
 }
 .nav-links:hover{
  cursor: pointer;
- transform: scale(1.05);
 }
 .nav-items {
   list-style: none;
@@ -20,8 +19,8 @@
 }
 .nav-items:hover{
  cursor: pointer;
-  transform: scale(1.05);
-  background-color: #8c1c45;
+ transform: scale(1.05);
+ background-color: #E02C6D;
 }
 .brand-name{
     margin-left: 120px;
@@ -249,7 +248,7 @@
 }
 /*footer section*/
 .footer {
-  background-color: #13113b;
+  background-color: #110e39;
   text-align: center;
   padding: 50px 580px; /* top-bottom: 50px, left-right: 580px */
   color: white;
@@ -276,101 +275,119 @@
 }
 
 
-/*Media and Querry*/
+/* ===== Mobile phones (up to 576px) ===== */
 @media screen and (max-width: 576px) {
 
-  /* Navbar adjustments */
- 
-  .brand-name {
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 50px; /* optional */
-  width: max-content; /* shrink-wrap the width */
-}
-  }
- .nav-links {
-    display: none;
-  }
-
-  .nav-items {
-    display: none;
-  }
-  /* Banner adjustments */
- .banner {
+  /* Navbar stacked vertically and centered */
+  .navbar {
     flex-direction: column;
-    text-align: center;
-    gap: 40px; /* Reduce gap on small screens */
-    padding: 20px;
+    align-items: center;
   }
 
-  .banner-content {
-    margin: 0 20px;
+  /* Brand name centered with margin */
+  .brand-name {
+    margin: 20px 0;
   }
 
-  .banner-wrap {
+  /* Nav links margin reset */
+  .nav-links {
+    margin-right: 0;
+  }
+
+  /* Banner stacked vertically */
+  .banner {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Banner wrapper smaller */
+  .banner-wrapper {
     width: 300px;
     height: 300px;
-    position: relative;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
 
-  .circle-image {
-    width: 100%;
-  }
-
-  .main-camera {
-    width: 270px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(15px, 15px); /* Adjust for center */
-}
-
-  /* Links section */
+  /* Links section without border, smaller margin */
   .links {
     border: none;
-    margin: 42px 10px;
+    margin: 40px 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-  }
-  .links-container {
-    
-    flex-direction: row;
-    
-   flex-wrap: wrap;
-    
-
   }
 
-  /* Collections */
+  /* Collections grid single column */
   .collections-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* Featured section */
+  /* Featured contents stacked */
   .featured-contents {
     flex-direction: column;
     margin: 0 20px;
     gap: 30px;
   }
+
+  /* Featured photo full width */
   .featured-photo {
     max-width: 100%;
     height: auto;
   }
 
-  /* Footer */
+  /* Footer smaller padding */
   .footer {
     padding: 40px 20px;
-    text-align: center;
   }
-  .footer-writings {
-    max-width: 100%;
-    margin: 0 auto 20px;
+}
+
+
+/* ===== iPad/Tablets (577px to 768px) ===== */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+  /* Navbar stacked vertically and centered */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
   }
-  .footer-logos ul {
-    flex-wrap: wrap;
-    gap: 12px;
+
+  /* Brand name centered with margin */
+  .brand-name {
+    margin: 15px 0;
   }
+
+  /* Banner with smaller gap */
+  .banner {
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Banner wrapper medium size */
+  .banner-wrapper {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 30px;
+  }
+
+  /* Collections grid two columns */
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  /* Featured contents stacked */
+  .featured-contents {
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 40px;
+  }
+
+  /* Footer medium padding */
+  .footer {
+    padding: 45px 40px;
+  }
+}
+
 
